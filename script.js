@@ -80,6 +80,34 @@ const projects = [
     github:
       "https://github.com/shalev396/Frontend-Mentor-projects/tree/main/faq-accordion-main",
   },
+  {
+    id: 7,
+    name: "Order Summary Component",
+    description: `Your challenge is to build out this order summary card component and get it looking as close to the design as possible.`,
+    difficulty: "1",
+    level: "NEWBIE",
+    tags: ["HTML", "CSS"],
+    image:
+      "/order-summary-component-main/Client/order-summary-component-main/design/desktop-preview.jpg",
+    link: "/order-summary-component-main/index.html",
+    badge: "DONE",
+    github:
+      "https://github.com/shalev396/Frontend-Mentor-projects/tree/main/order-summary-component-main",
+  },
+  {
+    id: 8,
+    name: "Product Preview Card Component",
+    description: `Your challenge is to build out this product preview card component and get it looking as close to the design as possible.`,
+    difficulty: "1",
+    level: "NEWBIE",
+    tags: ["HTML", "CSS"],
+    image:
+      "/product-preview-card-component-main/Client/product-preview-card-component-main/design/desktop-preview.jpg",
+    link: "/product-preview-card-component-main/index.html",
+    badge: "DONE",
+    github:
+      "https://github.com/shalev396/Frontend-Mentor-projects/tree/main/product-preview-card-component-main",
+  },
 ];
 
 // Define level color mapping
