@@ -330,7 +330,34 @@ body {
 /* Responsive styles */
 @media (min-width: 2400px) {
   .container {
-    max-width: 2200px;
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    width: 380px;
+    padding: 40px;
+  }
+
+  .sidebar h2 {
+    font-size: 32px;
+  }
+
+  .sidebar-subtitle {
+    font-size: 16px;
+  }
+
+  .sidebar .profile-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .social-link {
+    font-size: 18px;
+  }
+
+  .fullstack-btn {
+    padding: 14px 24px;
+    font-size: 18px;
   }
 
   .main-content {
@@ -354,6 +381,25 @@ body {
 @media (min-width: 1921px) and (max-width: 2399px) {
   .container {
     max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    width: 340px;
+    padding: 35px;
+  }
+
+  .sidebar h2 {
+    font-size: 30px;
+  }
+
+  .sidebar .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .social-link {
+    font-size: 17px;
   }
 
   .main-content {
