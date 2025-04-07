@@ -14,8 +14,6 @@ body {
 .container {
   display: flex;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 .sidebar {
@@ -125,7 +123,7 @@ body {
 #project-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   width: 100%;
 }
@@ -150,7 +148,8 @@ body {
 .project-image-container {
   position: relative;
   overflow: hidden;
-  height: 200px;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
 }
 
 .project-image {
@@ -158,6 +157,9 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .project-card:hover .project-image {
@@ -325,6 +327,84 @@ body {
   background-color: #ed2c49;
 }
 
+/* Responsive styles */
+@media (min-width: 2400px) {
+  .container {
+    max-width: 2200px;
+  }
+
+  .main-content {
+    padding: 60px;
+  }
+
+  #project-list {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px;
+  }
+
+  .main-content h1 {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2399px) {
+  .container {
+    max-width: 1800px;
+  }
+
+  .main-content {
+    padding: 50px;
+  }
+
+  #project-list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+  }
+
+  .main-content h1 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #project-list {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+
+  .main-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .sidebar {
+    width: 240px;
+    padding: 25px;
+  }
+
+  .sidebar h2 {
+    font-size: 24px;
+  }
+
+  .sidebar .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -337,17 +417,78 @@ body {
     position: relative;
   }
 
+  .profile-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar .profile-img {
+    margin-bottom: 0;
+  }
+
+  .profile-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .main-content h1 {
+    font-size: 32px;
+  }
+
   #project-list {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 }
 
-@media (max-width: 480px) {
-  #project-list {
-    grid-template-columns: 1fr;
+@media (max-width: 576px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .sidebar .profile-img {
+    margin-bottom: 15px;
+  }
+
+  .profile-links {
+    flex-direction: column;
   }
 
   .main-content {
     padding: 20px;
+  }
+
+  .main-content h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  #project-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 15px;
+  }
+
+  .project-details {
+    padding: 20px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .github-btn,
+  .difficulty-badge {
+    font-size: 12px;
   }
 }
