@@ -15,7 +15,7 @@ Review paragraphs inside the quotations have the same color as well, but are at 
 }
 @font-face {
   font-family: Barlow Semi Condensed;
-  src: url("/Frontend-Mentor-projects/testimonials-grid-section-main/assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf");
+  src: url("/testimonials-grid-section-main/assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf");
 }
 * {
   box-sizing: border-box;

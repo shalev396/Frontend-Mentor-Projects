@@ -3,31 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project List</title>
+    <title>Frontend Mentor Projects Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
-      <!-- Sidebar with profile link -->
+      <!-- Sidebar with profile info -->
       <aside class="sidebar">
-        <h2>Profile</h2>
-        <a href="https://github.com/shalev396" target="_blank">
-          <img
-            src="https://avatars.githubusercontent.com/u/60286095?s=400&u=7b8c70f3ef89b45efddfb47b59d65a8991c03e87&v=4"
-            alt="GitHub Profile"
-            class="profile-img"
-          />
-        </a>
-        <p>
-          <a href="https://github.com/shalev396" target="_blank"
-            >shalev396's GitHub</a
-          >
-        </p>
+        <h2>Shalev Ben Moshe</h2>
+        <p class="sidebar-subtitle">Full Stack Web Developer & QA Automation</p>
+        <div class="profile-container">
+          <a href="https://github.com/shalev396" target="_blank">
+            <img
+              src="https://avatars.githubusercontent.com/u/60286095?s=400&u=7b8c70f3ef89b45efddfb47b59d65a8991c03e87&v=4"
+              alt="GitHub Profile"
+              class="profile-img"
+            />
+          </a>
+          <div class="profile-links">
+            <a
+              href="https://github.com/shalev396"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/your-linkedin"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="sidebar-cta">
+          <a href="https://shalev396.com" target="_blank" class="fullstack-btn">
+            View Full Stack Projects
+          </a>
+        </div>
       </aside>
 
       <!-- Main content with project list -->
       <main class="main-content">
-        <h1>Projects</h1>
+        <header>
+          <h1>Frontend Mentor Projects</h1>
+          <p class="subtitle">Collection of my completed frontend challenges</p>
+        </header>
+
         <ul id="project-list">
           <!-- Project items will be added here by JavaScript -->
         </ul>
