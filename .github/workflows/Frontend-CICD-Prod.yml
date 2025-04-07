@@ -12,6 +12,37 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Check for changes in product-preview-card-component
+        id: check-product-preview
+        run: |
+          git diff --name-only HEAD^ HEAD | grep "product-preview-card-component-main/" && echo "changed=true" >> $GITHUB_OUTPUT || echo "changed=false" >> $GITHUB_OUTPUT
+
+      - name: Check for changes in order-summary-component
+        id: check-order-summary
+        run: |
+          git diff --name-only HEAD^ HEAD | grep "order-summary-component-main/" && echo "changed=true" >> $GITHUB_OUTPUT || echo "changed=false" >> $GITHUB_OUTPUT
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Build product-preview-card-component if changed
+        if: steps.check-product-preview.outputs.changed == 'true'
+        run: |
+          cd product-preview-card-component-main/Client
+          npm ci
+          npm run build
+
+      - name: Build order-summary-component if changed
+        if: steps.check-order-summary.outputs.changed == 'true'
+        run: |
+          cd order-summary-component-main/Client
+          npm ci
+          npm run build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
@@ -26,7 +57,9 @@ jobs:
             --delete \
             --exclude ".git/*" \
             --exclude ".github/*" \
-            --exclude "node_modules/*"
+            --exclude "node_modules/*" \
+            --exclude "product-preview-card-component-main/Client/node_modules/*" \
+            --exclude "order-summary-component-main/Client/node_modules/*"
       - name: Invalidate CloudFront Cache
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
