@@ -2,11 +2,7 @@
 
 A static portfolio that lists [Frontend Mentor](https://www.frontendmentor.io/) challenges completed in this repository. The landing page is plain HTML, CSS, and JavaScript; individual challenges live in their own folders (some include separate Vite/React builds that are committed as static output for hosting).
 
-## Live preview
-
-After your first production deploy, add your CloudFront or custom domain URL here (same pattern as your other static sites on AWS).
-
-Example: `https://your-subdomain.shalev396.com`
+## [Live preview](https://frontend-mentor-projects.shalev396.com)
 
 ---
 
@@ -21,25 +17,25 @@ There is no client-side filtering or search on the portfolio page; the list is d
 
 ## Tech stack (landing page)
 
-| Area        | Choice                                      |
-| ----------- | ------------------------------------------- |
-| Markup / UI | HTML, CSS, vanilla JavaScript               |
-| Icons       | Font Awesome (CDN)                          |
-| Hosting     | Static files (e.g. S3 + CloudFront)         |
+| Area        | Choice                              |
+| ----------- | ----------------------------------- |
+| Markup / UI | HTML, CSS, vanilla JavaScript       |
+| Icons       | Font Awesome (CDN)                  |
+| Hosting     | Static files (e.g. S3 + CloudFront) |
 
 ---
 
 ## Projects in this repo
 
-| Name | Level (FM) | Stack (tags) |
-| ---- | ---------- | ------------ |
-| Stats Preview Card Component | Newbie (1) | HTML, CSS |
-| Recipe Page | Newbie (1) | HTML, CSS |
-| Interactive Rating Component | Newbie (1) | HTML, CSS, JS |
-| FAQ Accordion | Newbie (1) | HTML, CSS, JS |
-| Order Summary Component | Newbie (1) | HTML, CSS |
-| Product Preview Card Component | Newbie (1) | HTML, CSS |
-| Testimonials Grid Section | Junior (2) | HTML, CSS |
+| Name                                         | Level (FM)   | Stack (tags)       |
+| -------------------------------------------- | ------------ | ------------------ |
+| Stats Preview Card Component                 | Newbie (1)   | HTML, CSS          |
+| Recipe Page                                  | Newbie (1)   | HTML, CSS          |
+| Interactive Rating Component                 | Newbie (1)   | HTML, CSS, JS      |
+| FAQ Accordion                                | Newbie (1)   | HTML, CSS, JS      |
+| Order Summary Component                      | Newbie (1)   | HTML, CSS          |
+| Product Preview Card Component               | Newbie (1)   | HTML, CSS          |
+| Testimonials Grid Section                    | Junior (2)   | HTML, CSS          |
 | REST Countries API with color theme switcher | Advanced (4) | HTML, CSS, JS, API |
 
 ---
