@@ -1,80 +1,69 @@
 # Frontend Mentor Projects Portfolio
 
-## Overview
+A static portfolio that lists [Frontend Mentor](https://www.frontendmentor.io/) challenges completed in this repository. The landing page is plain HTML, CSS, and JavaScript; individual challenges live in their own folders (some include separate Vite/React builds that are committed as static output for hosting).
 
-This repository contains a collection of frontend development challenges completed from **Frontend Mentor**. The projects showcase my skills in HTML, CSS, and JavaScript, ranging from simple component designs to complex API-integrated applications.
+## Live preview
 
-The portfolio site features a clean, modern interface with:
+After your first production deploy, add your CloudFront or custom domain URL here (same pattern as your other static sites on AWS).
 
-- Responsive grid layout for project showcasing
-- Project filtering by technology
-- Difficulty level indicators matching Frontend Mentor's rating system
-- Interactive project cards with hover effects
+Example: `https://your-subdomain.shalev396.com`
 
 ---
 
-## Website
+## What’s on the site
 
-You can view the live projects on the website here: [Frontend Mentor Projects](https://shalev396.github.io/)
+- **Landing page** — Profile sidebar (GitHub, LinkedIn), grid of project cards with preview images, difficulty level (Frontend Mentor scale), tech tags, short descriptions, and links to each challenge and its GitHub tree path.
+- **Challenges** — Each card opens the built/static `index.html` for that project in-repo.
 
-![Portfolio Screenshot](screenshot.png)
-
----
-
-## Projects
-
-The portfolio includes various projects with different difficulty levels:
-
-### Newbie (Level 1)
-
-- **Stats Preview Card Component**: A responsive stats card with a clean design
-- **Recipe Page**: A beautifully styled recipe layout with proper typography
-- **Interactive Rating Component**: A component that allows users to select and submit ratings
-- **FAQ Accordion**: An accessible accordion component for frequently asked questions
-
-### Junior (Level 2)
-
-- **Testimonials Grid Section**: A responsive grid layout featuring testimonial cards
-
-### Advanced (Level 4)
-
-- **REST Countries API**: An application that integrates with the REST Countries API, featuring a color theme switcher
+There is no client-side filtering or search on the portfolio page; the list is defined in `script.js`.
 
 ---
 
-## Portfolio Features
+## Tech stack (landing page)
 
-- **Modern Design**: Clean, card-based layout with consistent styling
-- **Responsive Layout**: Adapts seamlessly to different screen sizes
-- **Project Filtering**: Filter projects by technology (HTML/CSS, JavaScript, API)
-- **GitHub Integration**: Direct links to my GitHub profile
-
----
-
-## Technologies Used
-
-- **HTML5**: Semantic markup for the portfolio structure
-- **CSS3**: Modern styling including Grid, Flexbox, and transitions
-- **JavaScript**: Dynamic content rendering and filtering functionality
+| Area        | Choice                                      |
+| ----------- | ------------------------------------------- |
+| Markup / UI | HTML, CSS, vanilla JavaScript               |
+| Icons       | Font Awesome (CDN)                          |
+| Hosting     | Static files (e.g. S3 + CloudFront)         |
 
 ---
 
-## Setup and Installation
+## Projects in this repo
 
-To explore these projects locally:
+| Name | Level (FM) | Stack (tags) |
+| ---- | ---------- | ------------ |
+| Stats Preview Card Component | Newbie (1) | HTML, CSS |
+| Recipe Page | Newbie (1) | HTML, CSS |
+| Interactive Rating Component | Newbie (1) | HTML, CSS, JS |
+| FAQ Accordion | Newbie (1) | HTML, CSS, JS |
+| Order Summary Component | Newbie (1) | HTML, CSS |
+| Product Preview Card Component | Newbie (1) | HTML, CSS |
+| Testimonials Grid Section | Junior (2) | HTML, CSS |
+| REST Countries API with color theme switcher | Advanced (4) | HTML, CSS, JS, API |
+
+---
+
+## Repository layout (high level)
+
+- `index.html`, `styles.css`, `script.js` — Portfolio shell and project list data.
+- `*-main/` / `*-master/` — One folder per Frontend Mentor challenge (static assets and entry HTML).
+
+---
+
+## Local preview
 
 ```bash
-# Clone the repository
 git clone https://github.com/shalev396/Frontend-Mentor-projects.git
-
-# Navigate to the project directory
 cd Frontend-Mentor-projects
-
-# Open index.html in your browser
 ```
+
+Open `index.html` in a browser, or serve the repo root with any static file server so asset paths resolve correctly.
+
+**Order Summary** and **Product Preview Card** ship committed static build output at each project’s root (`index.html` + `assets/`). If you edit the React code under `Client/`, run `npm ci` and `npm run build` there and commit the updated output so production stays in sync.
 
 ---
 
 ## License
 
-Android Project Fleemarket © 2024 by Shalev Ben Moshe is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International. To view a copy of this license, visit [Creative Commons](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+[MIT](LICENSE)
